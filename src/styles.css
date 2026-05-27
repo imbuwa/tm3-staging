@@ -989,7 +989,7 @@ img {
 }
 
 .contact-form-section {
-  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
   align-items: stretch;
   padding-top: 0;
   padding-bottom: clamp(84px, 9vw, 118px);
