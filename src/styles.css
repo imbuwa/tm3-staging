@@ -821,43 +821,6 @@ img {
   color: #fff;
 }
 
-.archive-band {
-  position: relative;
-  grid-template-columns: minmax(300px, .82fr) minmax(420px, 1fr);
-  gap: clamp(36px, 6vw, 82px);
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 78% 24%, rgba(219,196,131,.18), transparent 24%),
-    radial-gradient(circle at 18% 82%, rgba(10,128,120,.24), transparent 28%),
-    linear-gradient(135deg, #09151d 0%, #10293a 48%, #0a1015 100%);
-}
-
-.archive-band::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: .18;
-  background-image:
-    linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 78%, transparent);
-  pointer-events: none;
-}
-
-.archive-band::after {
-  content: "";
-  position: absolute;
-  right: -7vw;
-  top: 18%;
-  width: 34vw;
-  height: 34vw;
-  border: 1px solid rgba(255,255,255,.13);
-  border-radius: 50%;
-  box-shadow: inset 0 0 90px rgba(219,196,131,.08);
-  pointer-events: none;
-}
-
 .archive-band > div,
 .visit-band > div,
 .visit-band .action-row {
@@ -865,49 +828,11 @@ img {
   justify-self: end;
 }
 
-.archive-copy,
-.archive-frame {
-  position: relative;
-  z-index: 1;
-}
-
-.archive-copy {
-  align-self: center;
-  padding: clamp(20px, 3vw, 34px) 0;
-}
-
-.archive-copy h2 {
-  max-width: 560px;
-}
-
-.archive-frame {
-  justify-self: start;
-  width: min(620px, 100%);
-  margin: 0;
-  padding: 12px;
+.archive-band img {
+  width: min(540px, 100%);
+  height: 420px;
   border-radius: var(--radius);
-  background:
-    linear-gradient(145deg, rgba(255,255,255,.24), rgba(255,255,255,.06)),
-    rgba(255,255,255,.08);
-  box-shadow: 0 34px 100px rgba(0,0,0,.38);
-  transform: rotate(-1.2deg);
-}
-
-.archive-frame::before {
-  content: "";
-  position: absolute;
-  inset: 28px -20px -20px 38px;
-  z-index: -1;
-  border: 1px solid rgba(219,196,131,.34);
-  border-radius: var(--radius);
-}
-
-.archive-frame img {
-  width: 100%;
-  height: clamp(340px, 32vw, 455px);
-  border-radius: calc(var(--radius) - 2px);
-  filter: sepia(.12) saturate(.7) contrast(1.04);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.14);
+  box-shadow: 0 28px 90px rgba(0,0,0,.32);
 }
 
 .archive-band .micro,
@@ -1164,7 +1089,6 @@ img {
   .form-copy,
   .info-panel,
   .archive-band > div,
-  .archive-frame,
   .visit-band > div,
   .visit-band .action-row {
     max-width: none;
@@ -1173,7 +1097,6 @@ img {
 
   .feature-grid,
   .museum-form,
-  .archive-frame,
   .archive-band img {
     max-width: none;
   }
@@ -1285,15 +1208,6 @@ img {
 
   .archive-band img {
     height: 310px;
-  }
-
-  .archive-frame {
-    padding: 8px;
-    transform: rotate(-.6deg);
-  }
-
-  .archive-frame::before {
-    inset: 18px -10px -12px 22px;
   }
 
   .detail-list li {

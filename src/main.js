@@ -161,14 +161,12 @@ function MineralDisplaysPage() {
     />
     <${CollectionVault} />
     <section className="archive-band reveal">
-      <div className="archive-copy">
+      <div>
         <p className="micro">Archives</p>
         <h2>Explore more than 1,000 historical documents.</h2>
         <p>Unlock the secrets of Tsumeb’s rich history through rare photographs, letters, diaries, official records, and archives that reveal the people and events that helped shape Namibia’s mining industry.</p>
       </div>
-      <figure className="archive-frame">
-        <img src=${assets.archive} alt="Historical Tsumeb mining archive photograph" />
-      </figure>
+      <img src=${assets.archive} alt="Historical Tsumeb mining archive photograph" />
     </section>
     <${Pricing} />
   `;
