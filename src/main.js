@@ -24,6 +24,8 @@ const assets = {
   blue: assetUrl('mineral-blue.jpg'),
   crystal: assetUrl('mineral-crystal.jpg'),
   archive: assetUrl('archive.jpg'),
+  logo: assetUrl('logo-tm3.png'),
+  logoSmall: assetUrl('logo-tm3-small.png'),
 };
 
 const navItems = [
@@ -110,7 +112,7 @@ function Navigation({ current }) {
   return html`
     <header className="nav-shell">
       <a className="brand" href=${pageUrl('/')} aria-label="TM3 home">
-        <span className="brand-glyph">TM³</span>
+        <span className="brand-glyph"><img src=${assets.logoSmall} alt="" /></span>
         <span>Tsumeb Mineralogic & Mining Museum</span>
       </a>
       <nav aria-label="Primary">
@@ -258,7 +260,7 @@ function Hero({ eyebrow, title, copy, image, action }) {
         </div>
         <aside className="hero-instrument" aria-label="Museum highlights">
           <div className="instrument-glass">
-            <div className="orbit"><div className="orbit-ring" /><span>TM³</span></div>
+            <div className="orbit"><div className="orbit-ring" /><span><img src=${assets.logoSmall} alt="" /></span></div>
             <dl>
               <div><dt>Collection</dt><dd>300+ specimens</dd></div>
               <div><dt>Archive</dt><dd>1,000+ records</dd></div>
@@ -368,7 +370,7 @@ function Footer() {
   return html`
     <footer className="footer">
       <div>
-        <strong>TM³</strong>
+        <img src=${assets.logoSmall} alt="TM3 logo" />
         <span>Tsumeb Mineralogic & Mining Museum</span>
       </div>
       <nav aria-label="Footer">
