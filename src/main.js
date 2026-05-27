@@ -231,6 +231,7 @@ function ContactPage() {
         <p className="micro">Let’s talk</p>
         <h2>Do you have any questions?</h2>
         <p>We would love to hear from you. Send an email or use the form to start a conversation with the museum team.</p>
+        <a className="secondary contact-direct" href="mailto:info@tm3.com.na">Email info@tm3.com.na</a>
       </div>
       <form className="museum-form reveal" action="mailto:info@tm3.com.na" method="post" encType="text/plain">
         <label>First name<input name="First name" required /></label>

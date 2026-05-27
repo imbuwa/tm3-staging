@@ -917,6 +917,7 @@ img {
 
 .contact-grid {
   align-items: stretch;
+  padding-bottom: clamp(34px, 5vw, 58px);
 }
 
 .info-panel {
@@ -928,6 +929,12 @@ img {
   border-radius: var(--radius);
   background: rgba(255,255,255,.54);
   box-shadow: 0 22px 70px rgba(22,24,26,.1);
+}
+
+.contact-grid .info-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
 }
 
 .info-panel.dark {
@@ -946,6 +953,10 @@ img {
   border-radius: var(--radius);
   list-style: none;
   background: rgba(17,19,21,.1);
+}
+
+.contact-grid .detail-list {
+  margin-top: auto;
 }
 
 .info-panel.dark .detail-list {
@@ -978,7 +989,55 @@ img {
 }
 
 .contact-form-section {
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  align-items: stretch;
   padding-top: 0;
+  padding-bottom: clamp(84px, 9vw, 118px);
+}
+
+.contact-form-section .form-copy,
+.contact-form-section .museum-form {
+  max-width: 551px;
+}
+
+.contact-form-section .form-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 520px;
+  padding: 34px;
+  border: 1px solid rgba(17,19,21,.1);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.38);
+  box-shadow: 0 22px 70px rgba(22,24,26,.08);
+}
+
+.contact-form-section .form-copy h2 {
+  max-width: 420px;
+  font-size: clamp(36px, 4vw, 54px);
+}
+
+.contact-form-section .form-copy p:last-of-type {
+  max-width: 430px;
+}
+
+.contact-direct {
+  justify-self: start;
+  align-self: flex-start;
+  margin-top: 28px;
+}
+
+.contact-form-section .museum-form {
+  justify-self: start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+}
+
+.contact-form-section .museum-form textarea {
+  flex: 1;
+  min-height: 170px;
 }
 
 .footer {
@@ -1109,6 +1168,17 @@ img {
   .footer nav,
   .footer > span {
     justify-self: start;
+  }
+
+  .contact-grid .info-panel,
+  .contact-form-section .form-copy {
+    min-height: auto;
+  }
+
+  .contact-form-section .form-copy,
+  .contact-form-section .museum-form {
+    max-width: none;
+    justify-self: stretch;
   }
 }
 
@@ -1258,6 +1328,15 @@ img {
   .museum-form,
   .info-panel {
     padding: 22px;
+  }
+
+  .contact-form-section .form-copy,
+  .contact-form-section .museum-form {
+    padding: 22px;
+  }
+
+  .contact-direct {
+    align-self: stretch;
   }
 
   .footer nav {
